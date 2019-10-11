@@ -58,7 +58,7 @@ public class MainController {
 		return companiesServicesImpl.postCompany(newCompanies);
 	}
 
-	@CrossOrigin
+	@CrossOrigin(origins = "https://reactcompanies.herokuapp.com")
 	@PutMapping("/companies/update/{id}")
 	public String updateIt(@PathVariable Long id, @RequestBody Companies changes) {
 		return companiesServicesImpl.updateCompanies(id, changes);
