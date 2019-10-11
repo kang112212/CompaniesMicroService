@@ -22,6 +22,7 @@ public class MainController {
 	@Autowired
 	CompaniesServicesImpl companiesServicesImpl;
 
+	@CrossOrigin
 	@GetMapping("/")
 	public String defaultLink() {
 		return "Try a different directory. https://reactcompanies.herokuapp.com/companies";
