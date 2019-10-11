@@ -24,7 +24,7 @@ public class MainController {
 
 	@GetMapping("/")
 	public String defaultLink() {
-		return "Try a different directory. http://localhost:8080/companies";
+		return "Try a different directory. https://reactcompanies.herokuapp.com/companies";
 	}
 
 	@CrossOrigin(origins = "https://reactcompanies.herokuapp.com/")
