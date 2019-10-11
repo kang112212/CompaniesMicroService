@@ -27,49 +27,49 @@ public class MainController {
 		return "Try a different directory. https://reactcompanies.herokuapp.com/companies";
 	}
 
-	@CrossOrigin(origins = "https://reactcompanies.herokuapp.com/")
+	@CrossOrigin(origins = "https://reactcompanies.herokuapp.com")
 	@GetMapping("/companies")
 	public List<Companies> mapAll() {
 		return companiesServicesImpl.getAll();
 	}
 
-	@CrossOrigin(origins = "https://reactcompanies.herokuapp.com/")
+	@CrossOrigin(origins = "https://reactcompanies.herokuapp.com")
 	@GetMapping("/companies/{id}")
 	public Companies mapById(@PathVariable Long id) {
 		return companiesServicesImpl.getByCompaniesId(id);
 	}
 
-	@CrossOrigin(origins = "https://reactcompanies.herokuapp.com/")
+	@CrossOrigin(origins = "https://reactcompanies.herokuapp.com")
 	@GetMapping("/companies/isecofriendly")
 	public List<Companies> mapEcoFriendly(@RequestParam Boolean hasEnvironmentProgram){
 		return companiesServicesImpl.getEcoFriendly(hasEnvironmentProgram);
 	}
 
-	@CrossOrigin(origins = "https://reactcompanies.herokuapp.com/")
+	@CrossOrigin(origins = "https://reactcompanies.herokuapp.com")
 	@GetMapping("/companies/isabove8")
 	public List<Companies> mapAbove8(@RequestParam Integer oneToTenRating){
 		return companiesServicesImpl.getAbove8(oneToTenRating);
 	}
 
-	@CrossOrigin(origins = "https://reactcompanies.herokuapp.com/")
+	@CrossOrigin(origins = "https://reactcompanies.herokuapp.com")
 	@PostMapping("/company")
 	public String postIt(@RequestBody Companies newCompanies) {
 		return companiesServicesImpl.postCompany(newCompanies);
 	}
 
-	@CrossOrigin(origins = "https://reactcompanies.herokuapp.com/")
+	@CrossOrigin(origins = "https://reactcompanies.herokuapp.com")
 	@PutMapping("/companies/update/{id}")
 	public String updateIt(@PathVariable Long id, @RequestBody Companies changes) {
 		return companiesServicesImpl.updateCompanies(id, changes);
 	}
 
-	@CrossOrigin(origins = "https://reactcompanies.herokuapp.com/")
+	@CrossOrigin(origins = "https://reactcompanies.herokuapp.com")
 	@DeleteMapping("/companies/delete")
 	public String deleteAll() {
 		return companiesServicesImpl.deleteAllCompanies();
 	}
 
-	@CrossOrigin(origins = "https://reactcompanies.herokuapp.com/")
+	@CrossOrigin(origins = "https://reactcompanies.herokuapp.com")
 	@DeleteMapping("/company/{id}")
 	public String deleteCompany(@PathVariable Long id) {
 		return companiesServicesImpl.deleteCompaniesById(id);
