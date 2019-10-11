@@ -65,6 +65,18 @@ public class CompaniesServicesImpl implements CompaniesServicesInt {
 		return "You updated Company to " + updatingCompany;
 	}
 
+	@Override
+	public String deleteCompaniesById(Long id) {
+		companiesRepository.deleteById(id);
+		return "company removed";
+	}
+
+	public List<Companies> getAbove8(Integer oneToTenRating) {
+		
+		return null;
+	}
+
+	
 	
 	
 	

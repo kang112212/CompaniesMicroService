@@ -14,6 +14,7 @@ public interface CompaniesRepository extends CrudRepository<Companies, Long> {
 	public Companies findCompaniesById(Long id);
 
 	public List<Companies> findAllCompaniesByhasEnvironmentProgram(Boolean eco);
+
 	
 	
 }

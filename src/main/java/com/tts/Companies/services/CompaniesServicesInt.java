@@ -18,4 +18,6 @@ public interface CompaniesServicesInt {
 
 	List<Companies> getEcoFriendly(Boolean eco);
 
+	String deleteCompaniesById(Long id);
+
 }
